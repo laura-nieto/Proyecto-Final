@@ -1,0 +1,904 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Sen:400,700&display=swap');
+body {
+    background-image: url(../img/1323984.png);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,li{
+   font-family: 'Sen', sans-serif; 
+}
+
+/* NAV */
+
+header nav{
+    background-color: rgba(149, 170, 97, 0.97);
+    font-family: 'Josefin Sans', sans-serif;
+}
+li.nav-item:first-child{
+    padding-right: 5px;
+    border-right: solid white 1.2px;
+    margin-right: 4px;
+}
+
+header nav.navbar a{
+    color: whitesmoke;
+}
+header nav button.navbar-toggler{/*color del menu desplegable en resoluciones menores a 990px aproximadamente*/
+    background-image: url("../img/menu.png");
+    background-repeat: no-repeat;
+    background-size:40px 40px;
+    background-position: top;
+}
+/* MAIN */
+
+main {
+    background-color: rgba(208, 218, 172, 0.985);
+}
+
+main div.tituloPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div.tituloPrincipal h1 {
+    text-align: center;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+main div.tituloPrincipal h3 {
+    margin-top: 20px;
+}
+
+main div.tituloPrincipal p {
+    width: 50%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+main div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main div section{
+    width: 40%;
+    margin: 20px;
+}
+
+/* CATEGORIAS */
+
+main div section.categorias{
+    background-color: #dacdac;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+main div section.categorias article.titulo h2 {
+    padding-top: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+main div section.categorias article.categoria {
+    background-color: #e4d6ae;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+main div section.categorias article.categoria#especial {
+    height: 100%;
+}
+
+
+main div section.categorias article.categoria ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: -40px;
+}
+
+main div section.categorias article.categoria ul li{
+    padding: 3px;
+}
+
+main div section.categorias article.categoria ul li a {
+    color: #324353;
+    background-color: #dbc5ac;
+    border-radius: 10px;
+    margin: 5px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+main div section.categorias article.categoria ul li a:hover{
+    background-color:  #fc9d30 ;
+}
+
+main div section.categorias article.boton{
+    margin: 10px auto 0;
+    padding-bottom: 12px; 
+}
+
+main div section.categorias article.boton a{
+    border-color: #8a4900;
+    color: #8a4900;
+}
+
+main div section.categorias article.boton a:hover{
+    background-color: #ad7536;
+    border-color: #8a4900;
+    color:whitesmoke;
+}
+
+/* RANKING */
+
+main div section.ranking{
+    background-color: #dacdac;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+main div section.ranking article.titulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+main div section.ranking article.titulo h2{
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+main div section.ranking article.posiciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4d6ae;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+main div section.ranking article.posiciones ol {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+main div section.ranking article.posiciones ol li{
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+main div section.ranking article.posiciones ol li:first-child{
+    margin-top: 5px;
+}
+
+main div section.ranking article.posiciones ol li a {
+    color: #324353;
+    border-radius: 10px;
+    margin: 5px;
+    display: block;
+    font-size: 20px;
+}
+
+main div section.ranking article.posiciones ol li img{
+    width: 3vw;
+}
+
+main div section.ranking article.boton{
+    margin: 5px auto;
+}
+main div section.ranking article.boton a{
+    border-color: #8a4900;
+    color: #8a4900;
+}
+
+/* Boton Paginacion */
+
+.page-item.disabled .page-link {
+    border-color: #a38a44;
+    color: rgb(95, 95, 95);
+    background-color: #dacdac;
+}
+
+.page-item.active .page-link {
+    border-color: #a38a44;
+    color: rgb(95, 95, 95);
+    background-color: #dacdacb2;
+}
+
+.page-link {
+    border-color: #a38a44;
+    color: black;
+    background-color: #dacdacb2;
+}
+.page-link:hover {
+    border-color: #ac793e;
+    background-color: #ac793e;
+    color: black;
+}
+
+.page-link:active {
+    border-color: #ac793e;
+    background-color: #ac793e;
+    color: black;
+}
+
+main div section.ranking article.boton a:hover{
+    background-color: #ad7536;
+    border-color: #8a4900;
+    color:whitesmoke;
+}
+
+/* Perfil */
+
+main div.pref{
+    justify-content: space-around;
+}
+
+main div section.profile{
+  background-color: #dacdac;
+  border-radius: 15px;
+  padding: 10px;
+  width: 230px;
+}
+main div section.profile article.profpic{
+  margin-bottom: 10px;
+}
+main div section.profile article.profinfo a{
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+main div section.profile article.profinfo a:hover{
+  text-decoration: underline;
+}
+main div section.profile article.profinfo p.campos{
+  background-color: #dbc5ac;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+main div section.profile article.profinfo ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: -54px;
+}
+main div section.profile article.profinfo ul li{
+  padding: 20px;
+}
+main div section.profile article.profinfo img.separador{
+  margin: 50px 0px;
+}
+main div section.profile article.profinfo button{
+  background-color: #dbc5ac;
+  border-color: #8a4900;
+  color: #8a4900;
+}
+main div section.profile article.profinfo button a{
+    text-decoration: none;
+    color: #8a4900;
+    font-size: small;
+}
+main div section.profile article.profinfo button a:hover{
+    text-decoration: none;
+}
+section.perfeed article.feed div{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  background-color: mediumSeaGreen;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  border-radius: 15px;
+}
+
+/* Editar */
+
+main section.edit {
+  background-color: #dacdac;
+  padding: 15px;
+  border-radius: 15px;
+  width: 45%;
+}
+main section.edit article.info{
+  padding: 10px;
+}
+main section.edit article.info form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #e4d6ae;
+  padding: 10px;
+  border-radius: 15px;
+}
+main section.edit article.info form input[type='file']{
+   margin: 10px 0;
+}
+main section.edit article.info form input[type='submit']{
+  background-color: #dbc5ac;
+  border-color: #8a4900;
+  color: #8a4900;
+  margin-bottom: 4px;
+}
+
+/* Borrar Usuario */
+
+main div.confirmar{
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div.confirmar form {
+    padding-bottom: 20px;
+}
+
+main div.confirmar div.alert{
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    padding-top: 30px;
+}
+
+/* Sugerir */
+
+main div.tituloPrincipal h2 {
+    margin: 20px 0 20px;
+}
+
+main section.subquest form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 100px 0;
+}
+
+main section.subquest textarea{
+    margin: 10px 0;
+}
+
+main section.subquest button{
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #dbc5ac;
+    border-color: #8a4900;
+    color: #8a4900;
+}
+
+/* ABM */
+
+main div section.modif{
+    background-color: #dbc5ac;
+    border-radius: 15px;
+    width: 85%;
+}
+main div section.modif h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+main div section.modif div form.abm div.form-check label {
+    text-align: left;
+}
+
+main div section.modif form div.buttom {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+main div section.modif form div.buttom input.redirect{
+  background-color: #dbc5ac;
+  border-color: #8a4900;
+  color: #8a4900;
+  margin-left: 20px;
+}
+
+/*AGREGAR*/
+
+main div.agreg{
+    padding :30px;
+    text-align: center;
+}
+main section.agreg {
+    background-color: #dacdac;
+    border-radius: 15px;
+    width: 45%;
+    padding:10px;
+}
+main section article.agreg{
+    background-color: #e4d6ae;
+    border-radius: 15px;
+    margin: 10px;
+    padding-top: 10px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+main section article.agreg div.asd form {
+    width: 100%;
+}
+
+main section article.agreg div.asd form input.ancho {
+    margin-left: 0;
+    width: 70%;
+}
+
+main section article.agreg form div.buttom {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+main section article.agreg form input.guardar {
+    background-color: #dbc5ac;
+    border-color: #8a4900;
+    color: #8a4900;
+    margin-left: 0;
+}
+
+/* MODIF PREGUNTA */
+main div.agreg section.agreg article.agreg form {
+    width: 100%;
+}
+
+main div.agreg section.agreg article.agreg form input.ancho {
+    margin-left: 0;
+    width: 70%;
+}
+main div.agreg section.agreg article.agreg form select {
+    margin-left: 0;
+    width: 70%;
+}
+
+/* MODIFICAR */
+
+main div.arreglo section.tabla div.buttom button.guardar {
+    background-color: #dbc5ac;
+    border-color: #8a4900;
+    margin-right: 50px;
+}
+
+main div.arreglo section.tabla div.buttom button.guardar a {
+    color: #8a4900;
+}
+
+main div.arreglo section.tabla div.buttom input.guardar {
+    background-color: #dbc5ac;
+    border-color: #8a4900;
+    color: #8a4900;
+    margin-left: 100px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color:rgba(149, 170, 97, 0.97);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+footer {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+footer section{
+    width: 100%;
+    margin: 20px, auto;
+    text-align: center;
+}
+
+footer section a{
+    text-decoration: none;
+    color: #FFFAF9;
+    margin: 10px;
+}
+
+footer section a:hover{
+    color: #FFFAF9;
+}
+
+footer section.redes h6{
+    color: #FFFAF9;
+    margin-bottom: 15px;
+}
+
+footer section.redes a i{
+    width: 36px;
+    height: 36px;
+    border: solid white 2px;
+    border-radius: 36px;
+    padding-top: 8px;
+}
+
+/*Contact*/
+
+main div section.categorias iframe{/*mapa*/
+    margin-left: 4.5%;
+    margin-bottom:3%;
+    width: 90%;
+    border-radius: 12px;
+}
+
+/* Login Y Registro */
+
+form label{ /*nombre de usuario, contraseña, confirmar contraseña*/
+    display: block;
+    text-align: center;
+    color: #324353;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form label:first-child{
+    padding-top: 10px;
+}
+
+main form div.alLado{ /*Recordar*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+}
+
+main form div.alLado input{
+    margin-top: 2px;
+}
+
+form label a{/*link para crear cuenta o loguear*/
+    font-size: 13px;
+    text-decoration: none;
+    text-decoration: underline;
+    color: #324353;
+}
+main section.categorias form input{
+    margin-left: 29%;
+}
+
+form article.boton {
+    display: flex;
+    justify-content: center;
+}
+
+form article.boton button{
+    background-color: transparent;
+    border-color:  #8a4900;
+    color:#8a4900;
+}
+
+form article.boton button:hover{
+    background-color: #ad7536;
+    border-color: #8a4900;
+    color:whitesmoke;
+}
+
+form article.categoria small{
+    color: red;
+    margin-left: 30%;
+    max-width: 40%;
+}
+
+/* RANKING PAG */
+
+main section.tabla {
+    width: 75%;
+    margin: 20px auto;
+}
+
+main section.tabla table thead{
+    background-color: #dacdacb2;
+    border-top: #ac9b6d 2px solid;
+}
+
+main section.tabla table tbody {
+    border-top: #ac9b6d 3px solid;
+}
+
+main section.tabla table tbody tr {
+    border-bottom: #ac9b6d 2px solid;
+}
+
+main section.tabla table tbody td a {
+    color: black
+}
+
+/* QUESTS */
+
+main div.tituloPrincipal img.img{
+    width:60px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+main section.preguntas {
+    width: 85%;
+    margin: 10px auto 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+main section.preguntas form {
+    margin-bottom: 30px;
+    background-color: #dacdac;
+    border-radius: 15px;
+}
+
+main section.preguntas form article.group{
+    background-color: #e4d6ae;
+    border-radius: 15px;
+    width: 85%;
+    margin: 20px auto;
+}
+
+main section.preguntas form div.pregunta{
+    margin: 10px 30px;
+    justify-content: flex-start;
+}
+
+main section.preguntas form div.pregunta label{
+    font-weight: bold;
+    margin: 10px 30px 0;
+}
+
+main section.preguntas form div.respuestas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+
+main section.preguntas form div.respuestas label {
+    margin-left: 120px;
+}
+
+main section.preguntas form div.respuestas label input {
+    margin-right: 10px;
+}
+main div section.preguntas form article.boton {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main div section.preguntas form article.boton button{
+    border-color: #8a4900;
+    color: #8a4900;
+}
+
+main div section.preguntas form article.boton button:hover{
+    background-color: #ad7536;
+    border-color: #8a4900;
+    color:whitesmoke;
+}
+
+/* FAQ */
+
+main section div.accordion{
+    width: 80%;
+    margin: 20px auto 0;
+    padding-bottom: 50px;
+    flex-direction: column;
+}
+
+main section div.accordion div.card {
+    border-color: #887953;
+}
+
+main section div.accordion div.card div.card-header{
+    background-color: #d4c49b;
+}
+
+main section div.accordion div.card div.card-header h2 button{
+    color: black;
+}
+
+main section div.accordion div.card div div.card-body{
+    background-color: #ebe5d7;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1199px){
+    /*Formulario de registro y login*/
+        form input{
+            margin-left:25%;
+        }
+        main section.preguntas form div.respuestas label{
+            margin-left: 0;
+            width: 40%;
+        }
+        main section.preguntas form div.respuestas label{
+            width: 50%;
+        }
+        main section.edit {
+            width: 60%;
+        }
+        main section.edit article.info form input{
+            margin-left: 0;
+        }
+}
+@media (max-width: 991px){
+    li.nav-item:first-child{
+        border-right: none;
+        border-bottom: solid white 1px;
+    }
+    main section.edit {
+        width: 70%;
+    }
+    /*Formulario de registro y login*/
+        form input{
+            margin-left:31%;
+        }
+
+        main div section {/*responsive*/
+            width: 70%;
+            margin: 20px;
+        }
+
+        form article.categoria small{
+            margin-left: 32%;
+        }
+
+    /* Agregar */
+    main section.agreg {
+        width: 70%;
+    }
+    main section.preguntas form div.respuestas label{
+        width: 60%;
+    }
+}
+@media (max-width:767px){
+    /*Formulario de registro y login*/
+        form input{
+            margin-left:30%;
+        }
+        main div#nobroken {
+            display: block;
+            padding-bottom: 8px;
+        }
+        main div section#nobroken{
+            margin-left: 30px;
+            margin-right: 30px;
+            width: 86%;
+        }
+        main div#nobroken section.ranking{
+            margin-left: 30px;
+            margin-right: 30px;
+            width: 86%;
+        }
+        main section.edit article.info form input[type='file']{
+            width: 100%;
+        }
+
+    /* MAIN */
+
+        main div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main div section {
+            width: 90%;
+            margin: 20px;
+        }
+        main div section.profile{
+            align-self: center;
+        }
+        main section.edit {
+            width: 80%;
+        }
+    /* Agregar y Modificar */
+        main div section.modif div {
+            flex-direction: row;
+        }
+
+        main section.agreg {
+            width: 90%;
+            align-self: center;
+        }
+
+        main section article.agreg form div.buttom {
+            flex-direction: row;
+        }
+
+    /*Recordarme*/
+
+        main form div.alLado{ /*Recordar*/
+            flex-direction: row;
+        }
+
+        main section.preguntas form div.respuestas label{
+            width: 75%;
+        }
+    /* FOOTER */
+
+        footer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer section {
+            margin-bottom: 20px;
+            border-right: none;
+            border-bottom: solid white 1.5px;
+            padding-bottom: 15px;
+        }
+
+        footer section:first-child{
+            margin-top: 10px;
+        }
+
+        footer section:last-child{
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+}
+
+@media (max-width: 575px){/*Responsive del formulario de registro y login*/
+    main div form input{
+        margin-left:28%;
+    }
+    main{
+        height: 100%;
+    }
+    main div#nobroken {
+        display: block;
+    }
+    main div section#nobroken{
+        width: 86%;
+    }
+    /* Agregar y Modificar */
+    main section.agreg {
+        align-self: center;
+        width: 100%;
+    }
+    main section article.agreg form div.buttom {
+        flex-direction: row;
+    }
+    /* Juego */
+    main section.preguntas form div.respuestas label{
+        width: 75%;
+    }
+    main section.preguntas form div.pregunta {
+        justify-content: center;
+    }
+}
+
+/* SOPORTE EDGE */
+@supports (-ms-ime-align:auto) {
+    main div {
+        justify-content: center;
+    }
+
+    main section.tabla table thead{
+        background-color: #dacdac;
+    }
+}
