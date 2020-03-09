@@ -16,7 +16,13 @@
           <img src="/img/avatar/{{Auth::user()->avatar}}" width="200px" height="200px;">
           <input type="file" name="avatar">
           <label for="nickPublico"> Tu Nick Público:</label>
-          <input type="text" name="usuario" value="{{Auth::user()->name}}">
+          <input type="text" name="name" value="{{Auth::user()->name}}">
+          @error('name')
+            <small id="emailHelp" class="form-text font-weight-bold font-italic text-danger">{{$message}}</small>
+          @enderror
+          @error('avatar')
+            <small id="emailHelp" class="form-text font-weight-bold font-italic text-danger">{{$message}}</small>
+          @enderror
           {{-- <label for="edad">Fecha de Nacimiento:</label>
           <input type="date" name="date" value=""> --}}
           {{-- <label for="pais">Pais:</label> --}}

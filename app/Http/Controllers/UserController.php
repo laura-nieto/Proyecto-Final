@@ -158,11 +158,19 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
       $reglas = [
-        'usuario' => 'required|string',
+        'name' => 'required|string|unique:users,name,'.Auth::id(),
         'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
       ];
 
-      $validar = $this->validate($request,$reglas);
+      $message = [
+        'unique' => "El nombre ingresado ya está en uso",
+        'required' => "El campo es obligatorio",
+        'image' => 'La imagen debe ser en formato: jpeg,png,jpg,gif,svg',
+        'mimes' => 'La imagen debe ser en formato: jpeg,png,jpg,gif,svg',
+        'max' => 'La imagen debe tener como maximo :max kb'
+      ];
+
+      $validar = $this->validate($request,$reglas,$message);
       $imageName = Auth::user()->avatar;
       if($request->file('avatar')){
         $img = $request->file('avatar');
@@ -172,7 +180,7 @@ class UserController extends Controller
 
      /*UPDATE*/
       $user->find(Auth::id())->update([
-        'name' => $request->usuario,
+        'name' => $request->name,
         'avatar' => $imageName,
       ]);
 
