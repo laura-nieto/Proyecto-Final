@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Sen:400,700&display=swap');
+@font-face {
+    font-family: "AgentOrange";
+    src: url("/fonts/AGENTORANGE.TTF");
+}
+
 body {
     background-image: url(../img/1323984.png);
 }
@@ -7,8 +12,11 @@ body {
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6,p,li{
-   font-family: 'Sen', sans-serif; 
+h1{
+   font-family: 'AgentOrange', sans-serif; 
+}
+h2,h3,h4,h5,h6,li,p,a,label{
+    font-family: 'Sen'
 }
 
 /* NAV */
@@ -46,8 +54,12 @@ main div.tituloPrincipal {
 
 main div.tituloPrincipal h1 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     text-transform: capitalize;
+}
+
+main div.tituloPrincipal h4 {
+    margin-top: 25px;
 }
 
 main div.tituloPrincipal h3 {
@@ -628,6 +640,80 @@ main section.tabla table tbody td a {
 }
 
 /* QUESTS */
+/* Estilo RadioButton */
+@keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+  }
+  
+  .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: rgba(208, 218, 172, 0.985);
+    border: none;
+    color: rgb(248, 234, 234);
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 1rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+  }
+  .option-input:hover {
+    background: #dacdac;
+  }
+  .option-input:checked {
+    background: #e4d6ae;
+  }
+  .option-input:checked::before {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    content: '✔';
+    color: green;
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #a0a5a5;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .option-input.radio {
+    border-radius: 50%;
+  }
+  .option-input.radio::after {
+    border-radius: 50%;
+  }
 
 main div.tituloPrincipal img.img{
     width:60px;

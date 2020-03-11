@@ -15,10 +15,10 @@
                                 <label for="">{{$pregunta}}</label>
                             </div>
                             <div class="respuestas">
-                                <label for=""><input type="radio" name="respuesta" value="{{$respuesta[0]}}">{{$respuesta[0]}}</label>
-                                <label for=""><input type="radio" name="respuesta" value="{{$respuesta[1]}}">{{$respuesta[1]}}</label>
-                                <label for=""><input type="radio" name="respuesta" value="{{$respuesta[2]}}">{{$respuesta[2]}}</label>
-                                <label for=""><input type="radio" name="respuesta" value="{{$respuesta[3]}}">{{$respuesta[3]}}</label>
+                                <label for=""><input type="radio" class="option-input radio"name="respuesta" value="{{$respuesta[0]}}">{{$respuesta[0]}}</label>
+                                <label for=""><input type="radio" class="option-input radio"name="respuesta" value="{{$respuesta[1]}}">{{$respuesta[1]}}</label>
+                                <label for=""><input type="radio" class="option-input radio"name="respuesta" value="{{$respuesta[2]}}">{{$respuesta[2]}}</label>
+                                <label for=""><input type="radio" class="option-input radio"name="respuesta" value="{{$respuesta[3]}}">{{$respuesta[3]}}</label>
                                 <input type="hidden" name="id" value="{{$idPregunta}}">
                             </div>
                         </article>

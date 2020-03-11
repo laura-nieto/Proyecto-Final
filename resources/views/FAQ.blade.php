@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 @section('title',"Preguntas Frecuentes")
 @section('titulo')
-    <h1>Preguntas Frecuentes de nuestros usuarios</h1>
+    <h2>Preguntas Frecuentes de nuestros usuarios</h2>
 @endsection
 @section('main')
     <section>

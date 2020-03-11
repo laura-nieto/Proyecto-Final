@@ -1,12 +1,12 @@
 @extends('layouts.plantilla')
 @section('title',"Home")
 @section('titulo')
-    <h1>BIENVENIDO
+    <h2>BIENVENIDO
         @guest
         @else
             {{Auth::user()->name}}
         @endguest
-    </h1>
+    </h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore deserunt, laborum nesciunt adipisci cupiditate alias eius nihil consectetur. Vel asperiores recusandae placeat, aliquid sunt quae quibusdam quo a perferendis alias?</p>
 @endsection
 @section('main')
