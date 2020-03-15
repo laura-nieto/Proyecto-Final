@@ -4,6 +4,10 @@
     src: url("/fonts/AGENTORANGE.TTF");
 }
 
+html,body {
+    height: 100%;
+}
+
 body {
     background-image: url(../img/1323984.png);
 }
@@ -17,6 +21,10 @@ h1{
 }
 h2,h3,h4,h5,h6,li,p,a,label{
     font-family: 'Sen'
+}
+
+div.container {
+    height: 100%;
 }
 
 /* NAV */
@@ -44,6 +52,7 @@ header nav button.navbar-toggler{/*color del menu desplegable en resoluciones me
 
 main {
     background-color: rgba(208, 218, 172, 0.985);
+    height: 85%;
 }
 
 main div.tituloPrincipal {
@@ -56,6 +65,12 @@ main div.tituloPrincipal h1 {
     text-align: center;
     margin-top: 30px;
     text-transform: capitalize;
+}
+
+main div.tituloPrincipal h2 {
+    margin: 20px 0 20px;
+    text-align: center;
+    padding: 10px;
 }
 
 main div.tituloPrincipal h4 {
@@ -373,10 +388,6 @@ main div.confirmar div.alert{
 
 /* Sugerir */
 
-main div.tituloPrincipal h2 {
-    margin: 20px 0 20px;
-}
-
 main section.subquest form {
     display: flex;
     flex-direction: column;
@@ -607,6 +618,10 @@ form article.boton button:hover{
     background-color: #ad7536;
     border-color: #8a4900;
     color:whitesmoke;
+}
+form article.boton button a{
+    text-decoration: none;
+    color:#8a4900;
 }
 
 form article.categoria small{
@@ -884,6 +899,10 @@ main section div.accordion div.card div div.card-body{
         }
 
     /* MAIN */
+        main {
+            min-height: 85%;
+            height: auto;
+        }
 
         main div{
             display: flex;

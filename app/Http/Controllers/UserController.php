@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\Quiz;
+use Session;
 
 class UserController extends Controller
 {
@@ -24,8 +25,8 @@ class UserController extends Controller
     public function responder(Request $req, Quiz $quiz)
     {
       $usuario = Auth::user();
-      //  foreach ($quiz->all() as $pregunta){
       $pregunta = $quiz->where('id',$req->id)->first();
+      $categoria=$pregunta->categoria;
       if($req->respuesta == $pregunta->opcion_correcta){
         $puntos = $usuario->correctas += 1;
         $puntaje = $usuario->puntaje += $pregunta->puntuacion;
@@ -33,13 +34,14 @@ class UserController extends Controller
           'correctas' => $puntos,
           'puntuacion' => $puntaje
         ]);
+        return redirect()->action('CategoriaController@listarPreguntas',['nombre'=>$categoria]);
       }
       else{
         $resta = $usuario->incorrectas += 1;
         $usuario->update(['incorrectas' => $resta]);
-        }
-
+        return view('error',['pregunta' =>$pregunta]);
       }
+    }
 
     /**
      * Display a listing of the resource.
@@ -184,7 +186,7 @@ class UserController extends Controller
         'avatar' => $imageName,
       ]);
 
-      return redirect()->action('UserController@show',['name'=>Auth::user()->name]);
+      return redirect()->action('UserController@show',['name'=>$request->name]);
     }
 
     /**

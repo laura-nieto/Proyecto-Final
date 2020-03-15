@@ -67,3 +67,7 @@ Route::get('/eliminarCuenta',function(){
     return view('confirmarCuenta');
 });
 Route::post('/eliminarCuenta','UserController@destroy');
+
+Route::get('/error', function(){
+    return view('error');
+});
