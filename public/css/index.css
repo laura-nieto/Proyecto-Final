@@ -17,7 +17,7 @@ body {
 }
 
 h1{
-   font-family: 'AgentOrange', sans-serif; 
+   font-family: 'AgentOrange', sans-serif;
 }
 h2,h3,h4,h5,h6,li,p,a,label{
     font-family: 'Sen'
@@ -154,7 +154,7 @@ main div section.categorias article.categoria ul li a:hover{
 
 main div section.categorias article.boton{
     margin: 10px auto 0;
-    padding-bottom: 12px; 
+    padding-bottom: 12px;
 }
 
 main div section.categorias article.boton a{
@@ -311,12 +311,25 @@ main div section.profile article.profinfo ul li{
   padding: 20px;
 }
 main div section.profile article.profinfo img.separador{
-  margin: 50px 0px;
+  margin: 30px 0px;
 }
 main div section.profile article.profinfo button{
   background-color: #dbc5ac;
   border-color: #8a4900;
   color: #8a4900;
+  margin-left: 35px;
+}
+main div section.profile article.profinfo button.eliminar{
+    background-color: #dbc5ac;
+    border-color: #8a4900;
+    color: #8a4900;
+    margin-left: 45px;
+}
+main div section.profile article.profinfo button.admin{
+    background-color: #dbc5ac;
+    border-color: #8a4900;
+    color: #8a4900;
+    margin-left: 55px;
 }
 main div section.profile article.profinfo button a{
     text-decoration: none;
@@ -671,7 +684,7 @@ main section.tabla table tbody td a {
       opacity: 0;
     }
   }
-  
+
   .option-input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -686,7 +699,7 @@ main section.tabla table tbody td a {
     height: 40px;
     width: 40px;
     transition: all 0.15s ease-out 0s;
-    background: rgba(208, 218, 172, 0.985);
+    background: rgba(149, 170, 97, 0.97);
     border: none;
     color: rgb(248, 234, 234);
     cursor: pointer;

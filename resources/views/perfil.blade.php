@@ -14,7 +14,7 @@
                 <p class="campos">Nombre Público: {{$usuario->name}} </p>
                 {{-- <p class="campos"></p> --}}
                 {{-- <p class="campos">País:</p> --}}
-                <p class="campos">Usuario desde: 
+                <p class="campos">Usuario desde:
                     @if(isset($usuario->created_at))
                         {{$usuario->created_at->format('d-m-y')}}
                     @else
@@ -37,10 +37,9 @@
                         <p>{{$usuario->timeOut}}</p>
                     </li>
                 </ul>
-                <p class="campos">Tiempo Jugado: 00:00</p>
                 <img class="separador" src="/img/linea.png" alt="" width="200px" height="10px">
                 @if(Auth::user()->name == $usuario->name)
-                    <button type="submit"><a href="/eliminarCuenta">Eliminar Cuenta</a></button>
+                    <button class="eliminar" type="submit"><a href="/eliminarCuenta">Eliminar Cuenta</a></button>
                     @if($admin->rol == 'player')
                         <img class="separador" src="/img/linea.png" alt="" width="200px" height="10px">
                         <form action="/sugerir">
@@ -49,7 +48,7 @@
                     @elseif ($admin->rol == 'admin')
                         <img class="separador" src="/img/linea.png" alt="" width="200px" height="10px">
                         <form class="" action="/abm" method="get">
-                            <button type="submit" name="button">Administrar</button>
+                            <button class="admin" type="submit" name="button">Administrar</button>
                         </form>
                     @endif
                 @else

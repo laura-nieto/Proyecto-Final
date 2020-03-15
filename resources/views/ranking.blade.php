@@ -19,10 +19,10 @@
                     @foreach ($usuarios as $usuario)
                        <tr>
                             <th scope="row" class="contador">{{$index++}}</th>
-                            <td> <a href="profile.php"> {{$usuario->name}} </a></td>
+                            <td> <a href="/perfil/{{$usuario->name}}"> {{$usuario->name}} </a></td>
                             <td>{{$usuario->puntaje}}</td>
                             {{-- <td>Historia</td> --}}
-                        </tr> 
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
