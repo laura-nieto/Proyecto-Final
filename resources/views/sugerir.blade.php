@@ -1,20 +1,33 @@
 @extends('layouts.plantilla')
 @section('title',"Sugerir Preguntas")
 @section('titulo')
-    <h2>Envianos las preguntas que te gustaria que agregemos!</h2>
+    <h1>Envianos las preguntas que te gustaria que agregemos!</h1>
 @endsection
 @section('main')
-    <section class="subquest">
-        <form class="" action="/perfil/{name}" method="post">
-        {{csrf_field()}}
-            <select class="" name="">
+<div style="margin-left: 34%">
+        <form method="post">
+          {{csrf_field()}}
+          <section class="categorias">
+            <select style="margin:20px" class="titulo" name="">
                 <option selected="selected">--Categoría--</option>
                 @foreach ($categorias as $categoria)
-                    <option value="{{$categoria->id}}">{{$categoria->nombre}}</option> 
+                    <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
                 @endforeach
             </select>
-            <textarea name="question" rows="8" cols="60" placeholder="Ingrese su Pregunta y debajo las opciones posibles."></textarea>
-            <button type="submit"href="/">Enviar!</button>
+            <article class="categoria">
+            <small>(*) campo obligatorio</small>
+            <input style="margin: 10px; margin-left:13%" type="text" name="" placeholder="La Pregunta" value="" required>*
+            <input style="margin: 10px; margin-left:13%" type="text" name="" placeholder="La Respuesta Correcta!" value="" required>*
+            <input style="margin: 10px; margin-left:13%" type="text" name="" placeholder="Alguna opcion" value="">
+            <input style="margin: 10px; margin-left:13%" type="text" name="" placeholder="Alguna opcion" value="">
+            <input style="margin: 10px; margin-left:13%" type="text" name="" placeholder="Alguna opcion" value="">
+          </article>
+          <article class="boton">
+            <input class="btn btn-outline-dark" style="width:80px;" type="submit" name="" value="Enviar!">
+            </section>
+          </article>
+
+
         </form>
-    </section>
+</div>
 @endsection

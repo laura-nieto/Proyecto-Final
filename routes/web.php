@@ -53,7 +53,11 @@ Route::get('/FAQ',function(){
 });
 
 Route::get('/sugerir','CategoriaController@listarSugerir');
+<<<<<<< Updated upstream
 Route::post('/sugerir','CategoriaController@listarIndex');
+=======
+Route::post('/sugerir','UserController@mensaje');
+>>>>>>> Stashed changes
 
 Route::get('/profedit',function(){
     return view ('profedit');

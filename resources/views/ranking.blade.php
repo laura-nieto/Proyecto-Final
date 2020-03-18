@@ -18,10 +18,15 @@
                 <tbody>
                     @foreach ($usuarios as $usuario)
                        <tr>
-                            <th scope="row" class="contador">{{$index++}}</th>
-                            <td> <a href="/perfil/{{$usuario->name}}"> {{$usuario->name}} </a></td>
-                            <td>{{$usuario->puntaje}}</td>
-                            {{-- <td>Historia</td> --}}
+                         @guest
+                         <th scope="row" class="contador">{{$index++}}</th>
+                         <td>{{$usuario->name}}</td>
+                         <td>{{$usuario->puntaje}}</td>
+                     @else
+                         <th scope="row" class="contador">{{$index++}}</th>
+                         <td> <a href="/perfil/{{$usuario->name}}"> {{$usuario->name}} </a></td>
+                         <td>{{$usuario->puntaje}}</td>
+                     @endguest 
                         </tr>
                     @endforeach
                 </tbody>

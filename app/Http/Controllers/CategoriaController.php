@@ -37,8 +37,7 @@ class CategoriaController extends Controller
             }
         }
         return view('mensaje');
-        //return redirect()->action('CategoriaController@listarIndex');
-    }
+     }
 
     /* LISTAR SUGERIR */
     public function listarSugerir(){

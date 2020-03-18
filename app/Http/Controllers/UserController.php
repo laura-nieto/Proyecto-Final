@@ -11,7 +11,11 @@ use Session;
 
 class UserController extends Controller
 {
-    private $arrayQuiz = [];
+
+    public function mensaje(){
+      return redirect()->action('CategoriaController@listarIndex');
+    }
+
   /* RANKING */
 
     public function ranking(){
@@ -25,7 +29,7 @@ class UserController extends Controller
     public function responder(Request $req, Quiz $quiz){
       $usuario = Auth::user();
       $pregunta = $quiz->where('id',$req->id)->first();
-      $categoria=$pregunta->categoria;
+      $categoria = $pregunta->categoria;
       if($req->respuesta == $pregunta->opcion_correcta){
         $puntos = $usuario->correctas += 1;
         $puntaje = $usuario->puntaje += $pregunta->puntuacion;
@@ -107,7 +111,10 @@ class UserController extends Controller
     if(!Hash::check($req->contraseña,$login->password)){
       return view('auth/login',['message'=> $logError]);
       //return response()->json['success'=>false,'message'=>'Usuario o email incorrecto']);
-    }    
+    }
+    if(Session::has('idJugada')){
+      Session::flush();
+    }
     return view('perfil');
      #################/*END login*/###########################
     }

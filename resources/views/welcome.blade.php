@@ -41,11 +41,19 @@
             </article>
             <article class="posiciones">
                 <ol>
+                  @guest
+                    <li><img src="{{asset('img\1puesto.png')}}" alt=""><a href="/registrar">{{$usuarios[0]}}</a></li>
+                    <li><img src="{{asset('img\2puesto.png')}}" alt=""><a href="/registrar">{{$usuarios[1]}}</a></li>
+                    <li><img src="{{asset('img\3puesto.png ')}}" alt=""><a href="/registrar">{{$usuarios[2]}}</a></li>
+                    <li><img src="{{asset('img\laurel.png')}}" alt=""><a href="/registrar">{{$usuarios[3]}}</a></li>
+                    <li><img src="{{asset('img\laurel.png')}}" alt=""><a href="/registrar">{{$usuarios[4]}}</a></li>
+                @else
                     <li><img src="{{asset('img\1puesto.png')}}" alt=""><a href="/perfil/{{$usuarios[0]}}">{{$usuarios[0]}}</a></li>
                     <li><img src="{{asset('img\2puesto.png')}}" alt=""><a href="/perfil/{{$usuarios[1]}}">{{$usuarios[1]}}</a></li>
                     <li><img src="{{asset('img\3puesto.png ')}}" alt=""><a href="/perfil/{{$usuarios[2]}}">{{$usuarios[2]}}</a></li>
                     <li><img src="{{asset('img\laurel.png')}}" alt=""><a href="/perfil/{{$usuarios[3]}}">{{$usuarios[3]}}</a></li>
                     <li><img src="{{asset('img\laurel.png')}}" alt=""><a href="/perfil/{{$usuarios[4]}}">{{$usuarios[4]}}</a></li>
+                @endguest 
                 </ol>
             </article>
             <article class="boton">
