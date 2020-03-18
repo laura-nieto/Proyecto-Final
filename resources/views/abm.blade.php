@@ -1,6 +1,20 @@
 @extends('layouts.plantilla')
 @section('title',"Administrar")
 @section('main')
+@guest
+<div class="padding"style="margin-top:25%">
+        <section class="modif">
+            <h3 >"NO TIENES PODER AQUI"</h3>
+            </section>
+    </div>
+@else
+@if($admin->rol == 'player')
+<div class="padding"style="margin-top:25%">
+        <section class="modif">
+            <h3 >"NO TIENES PODER AQUI"</h3>
+            </section>
+    </div>
+@elseif ($admin->rol == 'admin')
     <div class="padding">
         <section class="modif">
             <h3>Seleccione categoria a trabajar</h3>
@@ -20,4 +34,6 @@
             </div>
         </section>
     </div>
+    @endif
+    @endguest
 @endsection

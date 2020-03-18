@@ -7,6 +7,7 @@ use App\Quiz;
 use App\User;
 use Session;
 use Illuminate\Http\Request;
+use Auth;
 
 class CategoriaController extends Controller
 {
@@ -66,11 +67,13 @@ class CategoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  
+        $id=Auth::id();
+        $admin=User::find($id);
         $categorias=Categoria::all();
-        return view('abm',['categorias'=>$categorias]);
+        return view('abm',['categorias'=>$categorias],['admin'=>$admin]);
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
