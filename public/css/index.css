@@ -168,6 +168,22 @@ main div section.categorias article.boton a:hover{
     color:whitesmoke;
 }
 
+  /* MENSAJE */
+
+div section.categorias h3.mensaje{
+  text-align: center;
+  padding: 5px;
+}
+div section.categorias article.categoria p.mensaje{
+  text-align: center;
+  padding: 5px;
+}
+div section.categorias a.mensaje{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
 /* RANKING */
 
 main div section.ranking{

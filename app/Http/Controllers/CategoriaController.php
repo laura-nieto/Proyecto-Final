@@ -36,7 +36,8 @@ class CategoriaController extends Controller
             return view('quest',['categoria'=>$categoria,'pregunta'=>$pregunta,'respuesta'=>$respuesta,'idPregunta'=>$idPregunta]);
             }
         }
-        return redirect()->action('CategoriaController@listarIndex');
+        return view('mensaje');
+        //return redirect()->action('CategoriaController@listarIndex');
     }
 
     /* LISTAR SUGERIR */
