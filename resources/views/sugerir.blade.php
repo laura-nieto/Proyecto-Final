@@ -5,8 +5,8 @@
 @endsection
 @section('main')
     <section class="subquest">
-        <form class="" method="post">
-            @csrf
+        <form class="" action="/perfil/{name}" method="post">
+        {{csrf_field()}}
             <select class="" name="">
                 <option selected="selected">--Categoría--</option>
                 @foreach ($categorias as $categoria)
@@ -14,7 +14,7 @@
                 @endforeach
             </select>
             <textarea name="question" rows="8" cols="60" placeholder="Ingrese su Pregunta y debajo las opciones posibles."></textarea>
-            <button type="submit">Enviar!</button>
+            <button type="submit"href="/">Enviar!</button>
         </form>
     </section>
 @endsection

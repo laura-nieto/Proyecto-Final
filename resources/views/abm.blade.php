@@ -8,7 +8,7 @@
                 <form class="abm" action="/agregarPregunta" method="get">
                     <div class="form-check">
                         @foreach ($categorias as $categoria)
-                            <input class="form-check-input" type="radio" name="categoria" value="{{$categoria->id}}">
+                            <input class="form-check-input" type="radio" name="categoria" value="{{$categoria->id}}" checked>
                             <label class="" for="exampleRadios1">{{$categoria->nombre}}</label>
                         @endforeach     
                     </div>

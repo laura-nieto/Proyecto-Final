@@ -20,7 +20,7 @@
                     <tbody>
                         @foreach ($preguntas as $pregunta)
                             <tr>
-                                <td><input type="radio" name="id" value="{{$pregunta->id}}"></td>
+                                <td><input type="radio" name="id" value="{{$pregunta->id}}"checked></td>
                                 <th scope="row">{{$pregunta->id}}</th>
                                 <td>{{$pregunta->pregunta}}</td>
                                 <td>{{$pregunta->opcion_correcta}}</td>
