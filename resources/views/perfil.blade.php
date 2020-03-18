@@ -37,14 +37,14 @@
                         <p>{{$usuario->timeOut}}</p>
                     </li>
                 </ul>
-                <img class="separador" src="/img/linea.png" alt="" width="200px" height="10px">
                 @if(Auth::user()->name == $usuario->name)
-                    <button class="eliminar" type="submit"><a href="/eliminarCuenta">Eliminar Cuenta</a></button>
                     @if($admin->rol == 'player')
                         <img class="separador" src="/img/linea.png" alt="" width="200px" height="10px">
                         <form action="/sugerir">
                             <button type="submit" name="button">Sugerir Pregunta</button>
                         </form>
+                        <img class="separador" src="/img/linea.png" alt="" width="200px" height="10px">
+                        <button class="eliminar" type="submit"><a href="/eliminarCuenta">Eliminar Cuenta</a></button>
                     @elseif ($admin->rol == 'admin')
                         <img class="separador" src="/img/linea.png" alt="" width="200px" height="10px">
                         <form class="" action="/abm" method="get">
