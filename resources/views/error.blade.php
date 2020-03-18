@@ -18,7 +18,7 @@
                         </div>
                     </article>
                 <article class="boton">
-                    <button class="btn btn-outline-dark"><a href="/">Volver al inicio</a></button>
+                    <a href="/">Volver al Inicio</a>
                 </article>
             </form>
     </section>

@@ -8,7 +8,7 @@
       <p class="mensaje">Ya contestaste todas las preguntas de ésta categoría</p>
       <p class="mensaje">Volvé más tarde!</p>
     </article>
-    <a class="mensaje" href="/">Volver al Home</a>
+    <a class="mensaje" href="/">Volver al Inicio</a>
   </section>
 </div>
 @endsection
