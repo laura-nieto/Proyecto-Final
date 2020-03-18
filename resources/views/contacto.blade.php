@@ -20,5 +20,5 @@
                 <a class="btn btn-outline-dark" href="" role="button">Enviar sugerencia</a>
             </article> --}}
         </section>
-    <div>
+    </div>
 @endsection

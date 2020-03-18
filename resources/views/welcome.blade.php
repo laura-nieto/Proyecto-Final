@@ -7,7 +7,9 @@
             {{Auth::user()->name}}
         @endguest
     </h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore deserunt, laborum nesciunt adipisci cupiditate alias eius nihil consectetur. Vel asperiores recusandae placeat, aliquid sunt quae quibusdam quo a perferendis alias?</p>
+    <p>Esta página fue creada gracias a Alexis Bosco, Ian Suazo y María Laura Nieto como proyecto final para el curso de Programación Web Full Stack impartido por Digital House.
+        Esperamos que se divierta.
+    </p>
 @endsection
 @section('main')
     <div id="nobroken">
