@@ -11,7 +11,7 @@ use Session;
 
 class UserController extends Controller
 {
-
+    private $arrayQuiz = [];
   /* RANKING */
 
     public function ranking(){
@@ -22,8 +22,7 @@ class UserController extends Controller
 
   /* RESPONDER PREGUNTAS */
 
-    public function responder(Request $req, Quiz $quiz)
-    {
+    public function responder(Request $req, Quiz $quiz){
       $usuario = Auth::user();
       $pregunta = $quiz->where('id',$req->id)->first();
       $categoria=$pregunta->categoria;
@@ -60,7 +59,7 @@ class UserController extends Controller
       $reglas = [
         'usuario' => 'required',
         'email' => 'required',
-        'contraseña' => 'required|required_with:confirmar|same:confirmar',
+        'contraseña' => 'required|required_with:confirmar|same:confirmar|min:6',
         'confirmar' => 'required'
       ];
       $val = $this->validate ($req,$reglas);
@@ -101,15 +100,14 @@ class UserController extends Controller
     $logError = "usuario o email incorrecto.";
     $login = User::where('usuario','=',$req->usuario)->first();
     if(!$login){
-      return view('login',['message' => $logError]);
+      return view('auth/login',['message' => $logError]);
       //return response()->json['success'=>false,'message'=>'Usuario o email incorrecto']);
     }
     //   Hash::check($pw, $hashed);
     if(!Hash::check($req->contraseña,$login->password)){
-      return view('login',['message'=> $logError]);
+      return view('auth/login',['message'=> $logError]);
       //return response()->json['success'=>false,'message'=>'Usuario o email incorrecto']);
-    }
-
+    }    
     return view('perfil');
      #################/*END login*/###########################
     }
@@ -136,6 +134,10 @@ class UserController extends Controller
       $user = User::where('name',$name)->get()->first();
       $id=Auth::id();
       $admin=User::find($id);
+      $rank = User::orderBy('puntaje', 'desc')->pluck('id')->toArray();
+      $pos = array_search($user->id,$rank);
+      $pos++;
+      $user->pos=$pos;
       return view('perfil',['usuario'=>$user],['admin'=>$admin]);
     }
 

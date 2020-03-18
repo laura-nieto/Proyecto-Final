@@ -21,7 +21,7 @@
                         {{'No hay información'}}
                     @endif
                 </p>
-                <p class="campos">Ranking actual: #0</p>
+                <p class="campos">Ranking actual: #{{$usuario->pos}}</p>
                 {{-- <p class="campos">Mejor Ranking: #0</p> --}}
                 <ul>
                     <li>

@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Categoria;
 use App\Quiz;
 use App\User;
+use Session;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
 {
+    private $array = [];
 
     /* MOSTRAR PREGUNTAS */
 
@@ -18,12 +20,23 @@ class CategoriaController extends Controller
         $quest = Quiz::where('categoria_id',$categoria->id)->inRandomOrder()->get();
         foreach ($quest as $key){
           $idPregunta = $key->id;
-          $pregunta = $key->pregunta;
-          $collection = collect([$key->opcion_correcta,$key->opcion2,$key->opcion3,$key->opcion4]);
-          $respuesta = $collection->shuffle();
-          return view('quest',['categoria'=>$categoria,'pregunta'=>$pregunta,'respuesta'=>$respuesta,'idPregunta'=>$idPregunta]);
+          $verif = true;
+          if(Session::get('idJugada')){
+          foreach(Session::get('idJugada') as $test){
+              if($test == $idPregunta){
+                $verif = false;
+              }
+          }
+          }
+            if($verif){
+            Session::push('idJugada',$idPregunta);
+            $pregunta = $key->pregunta;
+            $collection = collect([$key->opcion_correcta,$key->opcion2,$key->opcion3,$key->opcion4]);
+            $respuesta = $collection->shuffle();
+            return view('quest',['categoria'=>$categoria,'pregunta'=>$pregunta,'respuesta'=>$respuesta,'idPregunta'=>$idPregunta]);
+            }
         }
-
+        return redirect()->action('CategoriaController@listarIndex');
     }
 
     /* LISTAR SUGERIR */
@@ -41,10 +54,11 @@ class CategoriaController extends Controller
         foreach($rank as $user){
             $usuarios->push($user->name);
         }
-        
+
         return view('welcome',['categorias'=>$categorias,'usuarios'=>$usuarios]);
-        
+
     }
+
 
     /**
      * Display a listing of the resource.
