@@ -19,21 +19,21 @@ class CategoriaController extends Controller
         //$categoria = Categoria::find($id);
         $quest = Quiz::where('categoria_id',$categoria->id)->inRandomOrder()->get();
         foreach ($quest as $key){
-          $idPregunta = $key->id;
-          $verif = true;
-          if(Session::get('idJugada')){
-          foreach(Session::get('idJugada') as $test){
-              if($test == $idPregunta){
-                $verif = false;
-              }
-          }
-          }
+            $idPregunta = $key->id;
+            $verif = true;
+            if(Session::get('idJugada')){
+                foreach(Session::get('idJugada') as $test){
+                    if($test == $idPregunta){
+                        $verif = false;
+                    }
+                }
+            }
             if($verif){
-            Session::push('idJugada',$idPregunta);
-            $pregunta = $key->pregunta;
-            $collection = collect([$key->opcion_correcta,$key->opcion2,$key->opcion3,$key->opcion4]);
-            $respuesta = $collection->shuffle();
-            return view('quest',['categoria'=>$categoria,'pregunta'=>$pregunta,'respuesta'=>$respuesta,'idPregunta'=>$idPregunta]);
+                Session::push('idJugada',$idPregunta);
+                $pregunta = $key->pregunta;
+                $collection = collect([$key->opcion_correcta,$key->opcion2,$key->opcion3,$key->opcion4]);
+                $respuesta = $collection->shuffle();
+                return view('quest',['categoria'=>$categoria,'pregunta'=>$pregunta,'respuesta'=>$respuesta,'idPregunta'=>$idPregunta]);
             }
         }
         return view('mensaje');

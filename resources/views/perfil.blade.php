@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 @section('title',"Perfil")
 @section('main')
-    <div class="pref">
+    <div class="pref padding">
         <section class="profile">
             <article class="profpic">
                 <a @if(Auth::user()->name == $usuario->name)href="/profedit" @else href=''@endif><img alt="imagen de perfil" src="/img/avatar/{{$usuario->avatar}}" width="210px" height="210px" style="border-radius:5px"></a>

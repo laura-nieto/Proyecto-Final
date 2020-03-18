@@ -53,6 +53,7 @@ Route::get('/FAQ',function(){
 });
 
 Route::get('/sugerir','CategoriaController@listarSugerir');
+Route::post('/sugerir','CategoriaController@listarIndex');
 
 Route::get('/profedit',function(){
     return view ('profedit');

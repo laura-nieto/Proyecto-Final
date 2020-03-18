@@ -20,7 +20,7 @@ h1{
    font-family: 'AgentOrange', sans-serif;
 }
 h2,h3,h4,h5,h6,li,p,a,label{
-    font-family: 'Sen'
+    font-family: 'Sen';
 }
 
 div.container {
@@ -105,6 +105,7 @@ main div section.categorias{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 }
 
 main div section.categorias article.titulo h2 {
@@ -436,6 +437,10 @@ main section.subquest button{
 }
 
 /* ABM */
+
+main div.padding {
+    padding-top: 30px;
+}
 
 main div section.modif{
     background-color: #dbc5ac;

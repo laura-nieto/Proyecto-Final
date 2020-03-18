@@ -36,7 +36,7 @@
           </select> --}}
           <br>
           <input type="submit" name="" value="Guardar cambios">
-          <a href='/perfil'>Volver</a>
+          <a href='/perfil/{{Auth::user()->name}}'>Volver</a>
       </form>
     </article>
   </section>

@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('main')
-    <div>
+    <div class="padding">
         <section class="categorias">
                 <article class="titulo">
                         <h2>Ingresar</h2>

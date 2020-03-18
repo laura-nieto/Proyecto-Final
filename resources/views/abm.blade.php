@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 @section('title',"Administrar")
 @section('main')
-    <div>
+    <div class="padding">
         <section class="modif">
             <h3>Seleccione categoria a trabajar</h3>
             <div>

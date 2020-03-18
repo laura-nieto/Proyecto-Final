@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 @section('title',"Tabla de Preguntas")
 @section('main')
-    <div class="arreglo">
+    <div class="arreglo padding">
         <section class="tabla">
             <form action="" method="get">
                 <div class="table-responsive-md table-responsive-sm table-responsive">

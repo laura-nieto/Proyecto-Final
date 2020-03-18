@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 @section('title','Crear cuenta')
 @section('main')
-    <div>
+    <div class="padding">
         <section class="categorias">
                 <article class="titulo">
                     <h2>Registro</h2>

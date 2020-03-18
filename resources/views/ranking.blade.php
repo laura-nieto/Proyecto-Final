@@ -4,7 +4,7 @@
     <h1>Ranking</h1>
 @endsection
 @section('main')
-    <div>
+    <div class="padding">
         <section class="tabla">
             <table class="table">
                 <thead>
